@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a animação de queda */
+@keyframes quedaFoto {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh); /* Move a imagem para baixo até o final da tela */
+        opacity: 1;
+    }
+}
+
+
+#foto1 {
+    animation: quedaFoto 5s linear infinite;
+    width: auto; 
+    height: auto;
+    max-width: 80%;
+    object-fit: cover;
+
+
+}
+
+#foto2 {
+    animation: quedaFoto 6s linear infinite;
+    width: auto; 
+    height: auto;
+    max-width: 80%;
+    object-fit: cover;
+    width: 100vw; /* Define a largura igual à largura da janela do navegador */
+
+}
+
+#foto3 {
+    animation: quedaFoto 7s linear infinite; 
+    width: auto; 
+    height: auto;
+    max-width: 80%;
+    object-fit: cover;
+    width: 100vw; /* Define a largura igual à largura da janela do navegador */
+
+}
+
+audio{
+    opacity: 0;
+}
+
+#canvas1 {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.152);
+    margin: auto;
+    top: 50px; /* Distância do topo da janela */
+    left: 0;
+    right: 0;
+    position: fixed; /* Fixa o elemento na posição especificada */
+    width: 80vw; /* Define a largura como 80% da largura da janela do navegador */
+    height: 80vh; /* Define a altura como 80% da altura da janela do navegador */
+    z-index: 1; /* Garante que o canvas fique acima do restante do conteúdo */
+}
